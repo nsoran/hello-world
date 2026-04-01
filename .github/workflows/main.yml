@@ -4,5 +4,7 @@ jobs:
   Hello-World-Job:
     runs-on:
       - codebuild-GithubActionsRunner-${{ github.run_id }}-${{ github.run_attempt }}
+      fleet: github-runner-fleet
+      buildspec-override: true
     steps:
       - run: echo "Hello World!"
